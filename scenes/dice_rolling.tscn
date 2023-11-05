@@ -1,0 +1,199 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjvkel25a7v7j"]
+
+[ext_resource type="Script" path="res://scenes/dice_rolling.gd" id="1_d383w"]
+[ext_resource type="Texture2D" uid="uid://blm31flka15uf" path="res://assets/button_normal.png" id="1_smlbt"]
+[ext_resource type="Texture2D" uid="uid://bnls4pn3w7h55" path="res://assets/button_pressed.png" id="2_myhci"]
+[ext_resource type="Texture2D" uid="uid://dncpwr38jxyti" path="res://assets/button_hover.png" id="3_vo0mu"]
+[ext_resource type="FontFile" uid="uid://lhct4cw0lk17" path="res://assets/font/LTCushion-Medium.ttf" id="4_h0h50"]
+[ext_resource type="Script" path="res://scenes/Dice.gd" id="6_s54vn"]
+
+[node name="DiceRolling" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d383w")
+
+[node name="WuerfelButtons" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 455.0
+offset_bottom = 455.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="1W20" type="TextureButton" parent="WuerfelButtons"]
+layout_mode = 2
+texture_normal = ExtResource("1_smlbt")
+texture_pressed = ExtResource("2_myhci")
+texture_hover = ExtResource("3_vo0mu")
+
+[node name="Label" type="Label" parent="WuerfelButtons/1W20"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 50
+text = "1W20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3W20" type="TextureButton" parent="WuerfelButtons"]
+layout_mode = 2
+texture_normal = ExtResource("1_smlbt")
+texture_pressed = ExtResource("2_myhci")
+texture_hover = ExtResource("3_vo0mu")
+
+[node name="Label2" type="Label" parent="WuerfelButtons/3W20"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 50
+text = "3W20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1W6" type="TextureButton" parent="WuerfelButtons"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_smlbt")
+texture_pressed = ExtResource("2_myhci")
+texture_hover = ExtResource("3_vo0mu")
+
+[node name="Label3" type="Label" parent="WuerfelButtons/1W6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 50
+text = "1W6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Werte" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="MU" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "MU: 13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KL" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "KL: 15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IN" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "IN: 12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CH" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "CH: 13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FF" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "FF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GE" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "GE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KO" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "KO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KK" type="Label" parent="Werte"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "KK
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice" type="Node" parent="."]
+script = ExtResource("6_s54vn")
+
+[node name="Dice_result" type="Label" parent="."]
+custom_minimum_size = Vector2(85, 0)
+offset_left = -118.0
+offset_top = 119.0
+offset_right = -24.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="WuerfelButtons/1W20" to="Dice" method="_on_w_20_pressed"]
+[connection signal="pressed" from="WuerfelButtons/3W20" to="Dice" method="_on_3_w_20_pressed"]
+[connection signal="pressed" from="WuerfelButtons/1W6" to="Dice" method="_on_w_6_pressed"]

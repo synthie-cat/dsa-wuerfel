@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccs4733bhrrmo"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_a4ho3"]
+[ext_resource type="Texture2D" uid="uid://dkq3lykvn0yic" path="res://assets/background.png" id="1_nqd7i"]
+[ext_resource type="PackedScene" uid="uid://ouewrf04vgew" path="res://scenes/character_select.tscn" id="2_g1tc6"]
+[ext_resource type="Script" path="res://global/heldenwerte.gd" id="4_kdg6d"]
+[ext_resource type="PackedScene" uid="uid://bjvkel25a7v7j" path="res://scenes/dice_rolling.tscn" id="5_rhf2s"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_a4ho3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(200, 350)
+texture = ExtResource("1_nqd7i")
+
+[node name="CharacterSelect" parent="." instance=ExtResource("2_g1tc6")]
+
+[node name="Heldenwerte" type="Node" parent="."]
+script = ExtResource("4_kdg6d")
+
+[node name="DiceRolling" parent="." instance=ExtResource("5_rhf2s")]
+visible = false
+offset_left = 204.0
+offset_top = 44.0
+offset_right = 204.0
+offset_bottom = 44.0

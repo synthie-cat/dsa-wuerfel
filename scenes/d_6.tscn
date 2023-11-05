@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl07lly3ntppo"]
+
+[ext_resource type="Texture2D" uid="uid://bguacppqep6uo" path="res://assets/dunkel_lila_d6.png" id="1_pghbo"]
+[ext_resource type="FontFile" uid="uid://lhct4cw0lk17" path="res://assets/font/LTCushion-Medium.ttf" id="2_fjalb"]
+
+[node name="D6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -149.5
+offset_right = 164.0
+offset_bottom = 149.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pghbo")
+
+[node name="DiceNumber" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36
+anchor_top = 0.434
+anchor_right = 0.664
+anchor_bottom = 0.607
+offset_left = 37.0
+offset_top = 18.7
+offset_right = -34.6
+offset_bottom = -15.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.721569, 0.376471, 1)
+theme_override_colors/font_outline_color = Color(0.721569, 0.458824, 0, 1)
+theme_override_fonts/font = ExtResource("2_fjalb")
+theme_override_font_sizes/font_size = 83
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 2
