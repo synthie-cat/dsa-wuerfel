@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl07lly3ntppo"]
+[gd_scene load_steps=2 format=3 uid="uid://bl07lly3ntppo"]
 
-[ext_resource type="Texture2D" uid="uid://bguacppqep6uo" path="res://assets/dunkel_lila_d6.png" id="1_pghbo"]
 [ext_resource type="FontFile" uid="uid://lhct4cw0lk17" path="res://assets/font/LTCushion-Medium.ttf" id="2_fjalb"]
 
 [node name="D6" type="Control"]
@@ -24,7 +23,6 @@ offset_right = 164.0
 offset_bottom = 149.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_pghbo")
 
 [node name="DiceNumber" type="Label" parent="."]
 layout_mode = 1

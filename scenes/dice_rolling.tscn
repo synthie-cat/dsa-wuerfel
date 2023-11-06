@@ -1,11 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjvkel25a7v7j"]
+[gd_scene load_steps=19 format=3 uid="uid://bjvkel25a7v7j"]
 
 [ext_resource type="Script" path="res://scenes/dice_rolling.gd" id="1_d383w"]
-[ext_resource type="Texture2D" uid="uid://blm31flka15uf" path="res://assets/button_normal.png" id="1_smlbt"]
-[ext_resource type="Texture2D" uid="uid://bnls4pn3w7h55" path="res://assets/button_pressed.png" id="2_myhci"]
-[ext_resource type="Texture2D" uid="uid://dncpwr38jxyti" path="res://assets/button_hover.png" id="3_vo0mu"]
+[ext_resource type="Texture2D" uid="uid://dw1kmc52hn3c8" path="res://assets/single_d20.png" id="2_o30ou"]
+[ext_resource type="Texture2D" uid="uid://bfe3j1hxjy4ts" path="res://assets/single_d20_pressed.png" id="3_n6avi"]
+[ext_resource type="Texture2D" uid="uid://r1ldcxvi8bnq" path="res://assets/single_d20_hover.png" id="4_0klia"]
 [ext_resource type="FontFile" uid="uid://lhct4cw0lk17" path="res://assets/font/LTCushion-Medium.ttf" id="4_h0h50"]
+[ext_resource type="Texture2D" uid="uid://b5sr2bh7m2s4w" path="res://assets/triple_d20.png" id="5_16p0j"]
+[ext_resource type="Texture2D" uid="uid://djfslgqrdxhkf" path="res://assets/triple_d20_pressed.png" id="6_15w86"]
 [ext_resource type="Script" path="res://scenes/Dice.gd" id="6_s54vn"]
+[ext_resource type="Texture2D" uid="uid://csq8yi0vxuc46" path="res://assets/triple_d20_hover.png" id="7_ixgk1"]
+[ext_resource type="Texture2D" uid="uid://xmupeumerseu" path="res://assets/single_d6.png" id="8_u3box"]
+[ext_resource type="Texture2D" uid="uid://cy6jucyuw5koy" path="res://assets/single_d6_pressed.png" id="9_npqvc"]
+[ext_resource type="Texture2D" uid="uid://dtxkpt45bchoe" path="res://assets/single_d6_hover.png" id="10_w5s4a"]
+[ext_resource type="Texture2D" uid="uid://d16yan5ii0580" path="res://assets/3_dice_20.png" id="13_rypm7"]
+[ext_resource type="Texture2D" uid="uid://oo2ettauj3je" path="res://assets/die_20.png" id="14_fej6x"]
+[ext_resource type="Texture2D" uid="uid://bkh0buqwsfuhs" path="res://assets/die_6.png" id="15_v1uut"]
+[ext_resource type="Texture2D" uid="uid://d0npgv2e18kxf" path="res://assets/close.png" id="16_eb71d"]
+[ext_resource type="Texture2D" uid="uid://32u1guncm550" path="res://assets/close_pressed.png" id="17_vy1jh"]
+[ext_resource type="Texture2D" uid="uid://duapjoysr0soi" path="res://assets/close_hover.png" id="18_1dj2t"]
 
 [node name="DiceRolling" type="Control"]
 layout_mode = 3
@@ -18,75 +30,37 @@ script = ExtResource("1_d383w")
 
 [node name="WuerfelButtons" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 455.0
-offset_bottom = 455.0
+offset_left = -5.0
+offset_top = 526.0
+offset_right = -5.0
+offset_bottom = 652.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+columns = 3
 metadata/_edit_group_ = true
 
 [node name="1W20" type="TextureButton" parent="WuerfelButtons"]
 layout_mode = 2
-texture_normal = ExtResource("1_smlbt")
-texture_pressed = ExtResource("2_myhci")
-texture_hover = ExtResource("3_vo0mu")
-
-[node name="Label" type="Label" parent="WuerfelButtons/1W20"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_h0h50")
-theme_override_font_sizes/font_size = 50
-text = "1W20"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("2_o30ou")
+texture_pressed = ExtResource("3_n6avi")
+texture_hover = ExtResource("4_0klia")
 
 [node name="3W20" type="TextureButton" parent="WuerfelButtons"]
 layout_mode = 2
-texture_normal = ExtResource("1_smlbt")
-texture_pressed = ExtResource("2_myhci")
-texture_hover = ExtResource("3_vo0mu")
-
-[node name="Label2" type="Label" parent="WuerfelButtons/3W20"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_h0h50")
-theme_override_font_sizes/font_size = 50
-text = "3W20"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("5_16p0j")
+texture_pressed = ExtResource("6_15w86")
+texture_hover = ExtResource("7_ixgk1")
 
 [node name="1W6" type="TextureButton" parent="WuerfelButtons"]
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("1_smlbt")
-texture_pressed = ExtResource("2_myhci")
-texture_hover = ExtResource("3_vo0mu")
-
-[node name="Label3" type="Label" parent="WuerfelButtons/1W6"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_h0h50")
-theme_override_font_sizes/font_size = 50
-text = "1W6"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("8_u3box")
+texture_pressed = ExtResource("9_npqvc")
+texture_hover = ExtResource("10_w5s4a")
 
 [node name="Werte" type="GridContainer" parent="."]
 custom_minimum_size = Vector2(30, 30)
@@ -94,11 +68,14 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 65.0
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 4
+metadata/_edit_group_ = true
 
-[node name="MU" type="Label" parent="Werte"]
+[node name="0" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -108,7 +85,7 @@ text = "MU: 13"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="KL" type="Label" parent="Werte"]
+[node name="1" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -118,7 +95,7 @@ text = "KL: 15"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="IN" type="Label" parent="Werte"]
+[node name="2" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -128,7 +105,7 @@ text = "IN: 12"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CH" type="Label" parent="Werte"]
+[node name="3" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -138,7 +115,7 @@ text = "CH: 13"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FF" type="Label" parent="Werte"]
+[node name="4" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -148,7 +125,7 @@ text = "FF"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GE" type="Label" parent="Werte"]
+[node name="5" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -158,7 +135,7 @@ text = "GE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="KO" type="Label" parent="Werte"]
+[node name="6" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -168,7 +145,7 @@ text = "KO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="KK" type="Label" parent="Werte"]
+[node name="7" type="Label" parent="Werte"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
@@ -182,18 +159,200 @@ vertical_alignment = 1
 [node name="Dice" type="Node" parent="."]
 script = ExtResource("6_s54vn")
 
-[node name="Dice_result" type="Label" parent="."]
+[node name="3D20" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = -204.0
+offset_top = -56.0
+offset_right = -164.0
+offset_bottom = -16.0
+
+[node name="TextureRect" type="TextureRect" parent="3D20"]
+layout_mode = 2
+offset_left = 88.0
+offset_top = 260.5
+offset_right = 312.0
+offset_bottom = 486.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("13_rypm7")
+
+[node name="die_1" type="Label" parent="3D20"]
 custom_minimum_size = Vector2(85, 0)
-offset_left = -118.0
-offset_top = 119.0
-offset_right = -24.0
-offset_bottom = 158.0
+layout_mode = 2
+offset_left = 32.0
+offset_top = 313.0
+offset_right = 256.0
+offset_bottom = 352.0
 theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_h0h50")
 theme_override_font_sizes/font_size = 35
+text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="die_2" type="Label" parent="3D20"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+offset_left = 145.0
+offset_top = 314.0
+offset_right = 369.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="die_3" type="Label" parent="3D20"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+offset_left = 88.0
+offset_top = 411.0
+offset_right = 312.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 35
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D20" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -200.0
+offset_top = -45.0
+offset_right = -160.0
+offset_bottom = -5.0
+
+[node name="TextureRect" type="TextureRect" parent="D20"]
+layout_mode = 2
+offset_left = 88.0
+offset_top = 260.5
+offset_right = 312.0
+offset_bottom = 516.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("14_fej6x")
+
+[node name="die" type="Label" parent="D20"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+offset_left = 89.0
+offset_top = 372.0
+offset_right = 313.0
+offset_bottom = 435.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 60
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D6" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -203.0
+offset_top = -30.0
+offset_right = -163.0
+offset_bottom = 10.0
+
+[node name="TextureRect" type="TextureRect" parent="D6"]
+layout_mode = 2
+offset_left = 88.0
+offset_top = 260.5
+offset_right = 312.0
+offset_bottom = 502.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("15_v1uut")
+
+[node name="die" type="Label" parent="D6"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+offset_left = 90.0
+offset_top = 299.0
+offset_right = 314.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 60
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="crit" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -143.0
+offset_top = 103.0
+offset_right = 181.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 40
+text = "Kritischer Erfolg!"
+
+[node name="success" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -65.0
+offset_top = 103.0
+offset_right = 259.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 40
+text = "Erfolg!"
+
+[node name="crit_fail" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -181.0
+offset_top = 106.0
+offset_right = 179.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 40
+text = "Kritischer Misserfolg!"
+
+[node name="fail" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -92.0
+offset_top = 106.0
+offset_right = 268.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.980392, 0.729412, 0.298039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_h0h50")
+theme_override_font_sizes/font_size = 40
+text = "Misserfolg!"
+
+[node name="exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 127.0
+offset_top = -45.0
+offset_right = 260.0
+offset_bottom = 82.0
+texture_normal = ExtResource("16_eb71d")
+texture_pressed = ExtResource("17_vy1jh")
+texture_hover = ExtResource("18_1dj2t")
+ignore_texture_size = true
 
 [connection signal="pressed" from="WuerfelButtons/1W20" to="Dice" method="_on_w_20_pressed"]
 [connection signal="pressed" from="WuerfelButtons/3W20" to="Dice" method="_on_3_w_20_pressed"]
 [connection signal="pressed" from="WuerfelButtons/1W6" to="Dice" method="_on_w_6_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

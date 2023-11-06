@@ -82,6 +82,28 @@ text = "Romoxosch"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Valariel" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_8fyeu")
+texture_pressed = ExtResource("2_watxr")
+texture_hover = ExtResource("3_h8isr")
+
+[node name="Label3" type="Label" parent="GridContainer/Valariel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ax7ne")
+theme_override_font_sizes/font_size = 50
+text = "Valariel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="GridContainer/Hesindian" to="." method="_on_hesindian_pressed"]
 [connection signal="pressed" from="GridContainer/Leomara" to="." method="_on_leomara_pressed"]
 [connection signal="pressed" from="GridContainer/Romoxosch" to="." method="_on_romoxosch_pressed"]
+[connection signal="pressed" from="GridContainer/Valariel" to="." method="_on_valariel_pressed"]

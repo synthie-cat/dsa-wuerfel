@@ -13,8 +13,6 @@ script = ExtResource("1_a4ho3")
 position = Vector2(200, 350)
 texture = ExtResource("1_nqd7i")
 
-[node name="CharacterSelect" parent="." instance=ExtResource("2_g1tc6")]
-
 [node name="Heldenwerte" type="Node" parent="."]
 script = ExtResource("4_kdg6d")
 
@@ -24,3 +22,7 @@ offset_left = 204.0
 offset_top = 44.0
 offset_right = 204.0
 offset_bottom = 44.0
+
+[node name="CharacterSelect" parent="." instance=ExtResource("2_g1tc6")]
+offset_top = 120.0
+offset_bottom = 160.0

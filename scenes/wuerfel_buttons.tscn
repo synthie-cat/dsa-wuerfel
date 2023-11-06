@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://bq7oky3v31iv6"]
+
+[ext_resource type="Texture2D" uid="uid://dw1kmc52hn3c8" path="res://assets/single_d20.png" id="1_yen5v"]
+[ext_resource type="Texture2D" uid="uid://bfe3j1hxjy4ts" path="res://assets/single_d20_pressed.png" id="2_le2fv"]
+[ext_resource type="Texture2D" uid="uid://r1ldcxvi8bnq" path="res://assets/single_d20_hover.png" id="3_h4fsh"]
+[ext_resource type="Texture2D" uid="uid://b5sr2bh7m2s4w" path="res://assets/triple_d20.png" id="4_3dnlh"]
+[ext_resource type="Texture2D" uid="uid://djfslgqrdxhkf" path="res://assets/triple_d20_pressed.png" id="5_1akl1"]
+[ext_resource type="Texture2D" uid="uid://csq8yi0vxuc46" path="res://assets/triple_d20_hover.png" id="6_lgj1t"]
+[ext_resource type="Texture2D" uid="uid://xmupeumerseu" path="res://assets/single_d6.png" id="7_5qdxr"]
+[ext_resource type="Texture2D" uid="uid://cy6jucyuw5koy" path="res://assets/single_d6_pressed.png" id="8_33m36"]
+[ext_resource type="Texture2D" uid="uid://dtxkpt45bchoe" path="res://assets/single_d6_hover.png" id="9_j2q6b"]
+
+[node name="WuerfelButtons" type="GridContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 126.0
+grow_horizontal = 2
+columns = 3
+metadata/_edit_group_ = true
+
+[node name="1W20" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("1_yen5v")
+texture_pressed = ExtResource("2_le2fv")
+texture_hover = ExtResource("3_h4fsh")
+
+[node name="3W20" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("4_3dnlh")
+texture_pressed = ExtResource("5_1akl1")
+texture_hover = ExtResource("6_lgj1t")
+
+[node name="1W6" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_5qdxr")
+texture_pressed = ExtResource("8_33m36")
+texture_hover = ExtResource("9_j2q6b")
